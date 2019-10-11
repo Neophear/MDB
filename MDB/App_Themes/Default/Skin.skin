@@ -1,0 +1,31 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:RequiredFieldValidator runat="server" CssClass="error" Display="Static" Text="*" />
+<asp:RegularExpressionValidator runat="server" CssClass="error" Display="Static" Text="*" />
+<asp:CustomValidator runat="server" CssClass="error" Display="None" Text="*" />
+<asp:GridView runat="server" GridLines="None" />
+<asp:DetailsView runat="server" GridLines="None" />
+<ajaxToolkit:AutoCompleteExtender runat="server"
+    MinimumPrefixLength="1"
+    CompletionInterval="100"
+    CompletionSetCount="10"
+    EnableCaching="true"
+    ServicePath="~/WebService.asmx"
+    FirstRowSelected="true"
+    CompletionListCssClass="completionlist"
+    CompletionListItemCssClass="completionlistItem"
+    CompletionListHighlightedItemCssClass="completionlistHighlight">
+</ajaxToolkit:AutoCompleteExtender>

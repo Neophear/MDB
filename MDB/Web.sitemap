@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="default.aspx" title="Forside"  description="Dette er forsiden">
+		<siteMapNode url="~/" title="Forside" description="Dette er forsiden" />
+		<siteMapNode url="devices" title="Mobile Enheder" description="Se alle mobile enheder">
+      <siteMapNode url="device/new" title="Opret" description="Opret mobil enhed" />
+      <siteMapNode url="device/multiinsert" title="Opret flere" description="Opret flere mobile enheder" />
+		</siteMapNode>
+		<siteMapNode url="simcards" title="SIM-kort" description="Se alle SIM-kort">
+			<siteMapNode url="simcard/new" title="Opret" description="Opret SIM-kort" />
+      <siteMapNode url="simcard/multiinsert" title="Opret flere" description="Opret flere SIM-kort" />
+    </siteMapNode>
+		<siteMapNode url="employees" title="Medarbejdere" description="Se alle medarbejdere">
+			<siteMapNode url="employee/new" title="Opret" description="Opret medarbejder" />
+      <siteMapNode url="employee/multiinsert" title="Opret flere" description="Opret flere medarbejdere" />
+    </siteMapNode>
+    <siteMapNode url="customtable" title="Hent andre tabeller" description="Hent tabeller der er lavet specifikt" />
+		<siteMapNode url="missingapprovals" title="Manglende godkendelser" description="Se alle ikke-godkendte ordrer" />
+    <siteMapNode url="settings" title="Indstillinger" description="Indstillinger for dig" />
+		<siteMapNode roles="Admin" description="Admin menu" title="Admin">
+			<siteMapNode url="admin/settings" title="Indstillinger" description="Rediger sidens indstillinger" />
+      <siteMapNode url="admin/muster" title="Mønstring" description="Importer en mønstring" />
+      <siteMapNode url="admin/customtable" title="Brugerdefinerede tabeller" description="Konfigurer brugerdefinerede tabeller" />
+      <siteMapNode url="admin/sql" title="Kør SQL" description="Kør SQL op mod databasen" />
+      <siteMapNode url="admin/users" title="Brugere" description="Rediger brugere på siden" />
+			<siteMapNode url="admin/bulkupdate" title="BULK-opdater" description="Opdater flere medarbejdere på en gang" />
+			<siteMapNode url="admin/log" title="Log" description="Se loggen over ordrer, mobile enheder og SIM-kort" />
+			<siteMapNode url="admin/userlog" title="Bruger log" description="Se loggen over brugerændringer" />
+			<siteMapNode url="admin/news" title="Opret nyhed" description="Opret nyhed" />
+      <siteMapNode url="admin/changelog" title="Ændringslog" description="Se/rediger ændringsloggen" />
+		</siteMapNode>
+	</siteMapNode>
+</siteMap>

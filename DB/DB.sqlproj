@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{0d28b340-8ca0-4fa6-9855-8f92d5db5d69}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DB</RootNamespace>
+    <AssemblyName>DB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Stored Procedures" />
+    <Folder Include="Views" />
+    <Folder Include="Scripts" />
+    <Folder Include="Functions" />
+    <Folder Include="Stored Procedures\UPDATE" />
+    <Folder Include="Stored Procedures\INSERT" />
+    <Folder Include="Stored Procedures\DELETE" />
+    <Folder Include="Stored Procedures\Logging" />
+    <Folder Include="Stored Procedures\User" />
+    <Folder Include="Stored Procedures\GET" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Devices.sql" />
+    <Build Include="Tables\DeviceTypes.sql" />
+    <Build Include="Tables\Status.sql" />
+    <Build Include="Tables\Log.sql" />
+    <Build Include="Tables\Actions.sql" />
+    <Build Include="Tables\ObjectTypes.sql" />
+    <Build Include="Tables\Units.sql" />
+    <Build Include="Views\DeviceView.sql" />
+    <Build Include="Views\SimcardView.sql" />
+    <Build Include="Tables\Simcards.sql" />
+    <Build Include="Tables\Orders.sql" />
+    <Build Include="Tables\UserInfo.sql" />
+    <Build Include="Functions\Trim.sql" />
+    <Build Include="Tables\LogUser.sql" />
+    <Build Include="Tables\Employees.sql" />
+    <Build Include="Tables\TaxTypes.sql" />
+    <Build Include="Views\OrdersView.sql" />
+    <Build Include="Views\ModelsView.sql" />
+    <Build Include="Views\ProvidersView.sql" />
+    <Build Include="Functions\CheckIfObjectExist.sql" />
+    <Build Include="Views\CurrentOrdersView.sql" />
+    <Build Include="Stored Procedures\Search.sql" />
+    <Build Include="Views\AllObjectsView.sql" />
+    <Build Include="Stored Procedures\ImportDevice.sql" />
+    <Build Include="Tables\DataPlans.sql" />
+    <Build Include="Tables\Quotas.sql" />
+    <Build Include="Stored Procedures\UPDATE\DataPlanUpdate.sql" />
+    <Build Include="Stored Procedures\UPDATE\DeviceUpdate.sql" />
+    <Build Include="Stored Procedures\UPDATE\EmployeeUpdate.sql" />
+    <Build Include="Stored Procedures\UPDATE\QuotaUpdate.sql" />
+    <Build Include="Stored Procedures\UPDATE\SimcardUpdate.sql" />
+    <Build Include="Stored Procedures\UPDATE\UnitUpdate.sql" />
+    <Build Include="Stored Procedures\UPDATE\UserUpdate.sql" />
+    <Build Include="Stored Procedures\INSERT\DataPlanInsert.sql" />
+    <Build Include="Stored Procedures\INSERT\DeviceInsert.sql" />
+    <Build Include="Stored Procedures\INSERT\EmployeeInsert.sql" />
+    <Build Include="Stored Procedures\INSERT\OrderInsert.sql" />
+    <Build Include="Stored Procedures\INSERT\QuotaInsert.sql" />
+    <Build Include="Stored Procedures\INSERT\SimcardInsert.sql" />
+    <Build Include="Stored Procedures\INSERT\UserInsert.sql" />
+    <Build Include="Stored Procedures\INSERT\UnitInsert.sql" />
+    <Build Include="Stored Procedures\DELETE\DataPlanDelete.sql" />
+    <Build Include="Stored Procedures\DELETE\DeviceDelete.sql" />
+    <Build Include="Stored Procedures\DELETE\EmployeeDelete.sql" />
+    <Build Include="Stored Procedures\DELETE\QuotaDelete.sql" />
+    <Build Include="Stored Procedures\DELETE\SimcardDelete.sql" />
+    <Build Include="Stored Procedures\DELETE\UnitDelete.sql" />
+    <Build Include="Stored Procedures\DELETE\UserDelete.sql" />
+    <Build Include="Stored Procedures\Logging\WriteLog.sql" />
+    <Build Include="Stored Procedures\Logging\WriteLogUser.sql" />
+    <Build Include="Stored Procedures\CanUserWrite.sql" />
+    <Build Include="Stored Procedures\ImportSimcard.sql" />
+    <Build Include="Stored Procedures\Logging\GetUserLog.sql" />
+    <Build Include="Views\UserLogView.sql" />
+    <Build Include="Views\LogView.sql" />
+    <Build Include="Stored Procedures\Logging\GetLog.sql" />
+    <Build Include="Tables\SiteInfo.sql" />
+    <Build Include="Tables\News.sql" />
+    <Build Include="Stored Procedures\INSERT\NewsInsert.sql" />
+    <Build Include="Stored Procedures\UPDATE\NewsUpdate.sql" />
+    <Build Include="Stored Procedures\DELETE\NewsDelete.sql" />
+    <Build Include="Stored Procedures\INSERT\OrderInsertFromITMat.sql" />
+    <Build Include="Stored Procedures\SetOrderToStorage.sql" />
+    <Build Include="Tables\ChangeLog.sql" />
+    <Build Include="Stored Procedures\INSERT\ChangeLogInsert.sql" />
+    <Build Include="Stored Procedures\UPDATE\ChangeLogUpdate.sql" />
+    <Build Include="Functions\VisibleTo.sql" />
+    <Build Include="Stored Procedures\OrderApprove.sql" />
+    <Build Include="Tables\Comments.sql" />
+    <Build Include="Stored Procedures\INSERT\CommentInsert.sql" />
+    <Build Include="Stored Procedures\UPDATE\CommentUpdate.sql" />
+    <Build Include="Views\CommentsView.sql" />
+    <Build Include="Stored Procedures\DELETE\CommentDelete.sql" />
+    <Build Include="Stored Procedures\Logging\GetObjectLog.sql" />
+    <Build Include="Stored Procedures\User\UserChangedPassword.sql" />
+    <Build Include="Stored Procedures\User\UserUnlock.sql" />
+    <Build Include="Stored Procedures\SetEmployeeSignedSolemnDeclaration.sql" />
+    <Build Include="Stored Procedures\InsertEmployeeIfNotExistFromSQL.sql" />
+    <Build Include="Stored Procedures\UPDATE\EmployeeBULKUpdate.sql" />
+    <Build Include="Stored Procedures\ObjectExists.sql" />
+    <Build Include="Tables\SimcardFormats.sql" />
+    <Build Include="Functions\GetUserShort.sql" />
+    <Build Include="Functions\GetUserFull.sql" />
+    <Build Include="Tables\SQLPresets.sql" />
+    <Build Include="Stored Procedures\DELETE\SQLPresetDelete.sql" />
+    <Build Include="Stored Procedures\INSERT\SQLPresetInsert.sql" />
+    <Build Include="Stored Procedures\UPDATE\SQLPresetUpdate.sql" />
+    <Build Include="Stored Procedures\GET\GetChangeLog.sql" />
+    <Build Include="Stored Procedures\GET\GetEmployeeInfo.sql" />
+    <Build Include="Stored Procedures\GET\GetFullName.sql" />
+    <Build Include="Stored Procedures\GET\GetNews.sql" />
+    <Build Include="Stored Procedures\GET\GetRedirectInfo.sql" />
+    <Build Include="Stored Procedures\GET\GetSQLPresets.sql" />
+    <Build Include="Stored Procedures\GET\GetSQLPresetQuery.sql" />
+    <Build Include="Views\UnapprovedOrdersView.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DBTest.publish.xml" />
+    <None Include="Scripts\Membership.sql" />
+    <None Include="Scripts\InsertTestVariables.sql" />
+  </ItemGroup>
+</Project>

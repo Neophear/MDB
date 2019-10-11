@@ -1,0 +1,2 @@
+﻿CREATE VIEW [dbo].[ProvidersView]
+	AS SELECT DISTINCT [Provider] COLLATE Latin1_General_CS_AS AS [Provider] FROM (SELECT DISTINCT [Provider] COLLATE Latin1_General_CS_AS AS [Provider] FROM [Devices] UNION SELECT [Provider] COLLATE Latin1_General_CS_AS FROM [Simcards]) AS tbl

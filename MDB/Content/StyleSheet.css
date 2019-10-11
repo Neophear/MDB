@@ -1,0 +1,575 @@
+﻿/* Color scheme: http://paletton.com/#uid=13L0u0k7UUa3cZA5wXlaiQ5cFL3 */
+/* CSS selector: https://flukeout.github.io/ */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #FCFCFC;
+    font-family: Verdana;
+    color: #333;
+    font-size: 12px;
+}
+
+header {
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    height: 65px;
+    background: linear-gradient(to bottom, #D0DBF5, #E5ECFB);
+}
+
+input[type=submit], input[type=button] {
+    padding: 3px 15px;
+    border-radius: 8px;
+    background-color: #D0DBF5;
+    border-color: #bbb;
+}
+
+input[type=text], textarea, input[type=password], input[type=date], input[type=number], select {
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    height: 25px;
+}
+
+input[type=text] {
+    padding: 0 4px;
+}
+
+select option{
+    padding:3px;
+}
+
+textarea {
+    height: 100px;
+    width: 100%;
+    resize: none;
+    padding: 4px;
+}
+
+input[readonly] {
+    background-color: #ebebe4;
+}
+
+input[type=submit][disabled] {
+    background-color: #ebebe4;
+}
+
+a, a:hover, a:visited {
+    color: #777;
+}
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px #999;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #fff;
+    font-family: Georgia;
+    text-shadow: 0 0 3px #000;
+    letter-spacing: 8px;
+    display: inline;
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+a.logo {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+h3 {
+    text-align: center;
+    margin: 5px;
+}
+
+footer {
+    height: 45px;
+    background: linear-gradient(to bottom, #E5ECFB, #D0DBF5);
+    border-radius: 0 0 8px 8px;
+}
+
+    footer p {
+        margin: 0;
+        padding: 10px;
+        color: #777;
+        text-align: center;
+        font-size: 0.6em;
+    }
+
+main {
+    min-height: 400px;
+    background-color: #E5ECFB;
+    padding: 10px;
+}
+
+td input[type=submit] {
+    margin: 0 5px;
+}
+
+th {
+    text-align: left;
+}
+
+/* Menu */
+nav {
+    background-color: #E5ECFB;
+    height: 55px;
+}
+
+    nav ul {
+        padding-left: 10px;
+    }
+
+    nav li, nav a {
+        display: inline-table;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+
+        nav li:hover {
+            background-color: #D0DBF5;
+        }
+
+    nav a {
+        color: #777;
+        text-decoration: none;
+        padding: 5px 15px;
+    }
+
+    nav li[aria-haspopup] {
+        border-radius: 4px 4px 0 0;
+    }
+
+    nav li ul {
+        background-color: #D0DBF5;
+        border-radius: 0 4px 4px 4px;
+        padding: 0;
+    }
+
+        nav li ul li a, nav li ul li {
+            width: 100%;
+        }
+
+            nav li ul li:hover {
+                background-color: #A1B5E2;
+            }
+
+/* ------------------ */
+
+.gridview {
+    overflow: hidden;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+    .gridview a {
+        text-decoration: none;
+    }
+
+    .gridview input, .gridview select {
+        width: 130px;
+    }
+
+        .gridview input[readonly] {
+            background-color: white;
+        }
+
+.detailsview {
+    color: #555;
+    width: 500px;
+}
+
+    .detailsview * td:last-of-type {
+        word-break: break-word;
+    }
+
+    .detailsview td, .modalPopup {
+        padding: 3px;
+    }
+
+/* Editor
+----------------------------------------------------------*/
+
+.editorTable td {
+    text-align: left;
+}
+
+.editorTable input, .editorTable select {
+    font-size: 9pt;
+    width: auto;
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: #bbb;
+}
+
+.editorTable select {
+    height: 20px;
+}
+
+.newsEditor input[type=checkbox] ~ label {
+    margin-right: 20px;
+}
+
+/* News, ChangeLog and Comments */
+.news {
+    width: 1000px;
+}
+
+.changelog {
+    width: 150px;
+}
+
+.comments table {
+    word-break: break-word;
+    width: 400px;
+}
+
+.box, .news, .changelog, .comments > table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.box > div:first-child, .news tr:first-child td, .changelog tr:first-child td, .comments > table tr:first-child td {
+    border-radius: 8px 8px 0 0;
+}
+
+.box > div:last-child, .news tr:last-child td, .changelog tr:last-child td, .comments > table tr:last-child td {
+    border-radius: 0 0 8px 8px;
+}
+
+.box > div, .news td, .changelog td, .comments > table td {
+    padding: 5px;
+}
+
+    .box > div:first-child,
+    .newsNormal tr:first-child td, .news tr:nth-of-type(3) td,
+    .changelog tr:nth-child(odd) td,
+    .comments > table tr:nth-child(odd) td {
+        background-color: #B9C9ED;
+    }
+
+    .box > div:not(:first-child), .news tr:nth-of-type(2) td, .changelog tr:nth-of-type(2) td, .comments > table tr:nth-child(2) td {
+        background-color: #D0DBF5;
+    }
+
+.news tr:nth-of-type(3) td, .changelog tr:nth-of-type(3) td, .comments > table tr:nth-of-type(3) td {
+    font-size: 0.8em;
+}
+
+.newsSticky tr:first-of-type td {
+    background-color: #FFC0C0;
+}
+
+.comments > :last-child {
+    text-align: right;
+}
+
+/* CustomTable */
+.customtable {
+    display: flex;
+}
+
+.customtable > div {
+    display:inline-block;
+    vertical-align:top;
+    margin:0px 10px;
+}
+    .customtable > div:nth-child(2) > div:nth-child(2) {
+        min-height: 50px;
+        min-width: 200px;
+    }
+
+    table.customtable td {
+        padding:0px;
+    }
+
+.customtable select {
+    height: 100px;
+    width: 200px;
+}
+
+.customtable .box > div:nth-child(3){
+    text-align:right;
+}
+
+/* Infobox */
+.infobox {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #B9C9ED;
+    overflow: hidden;
+    font-size: 1.1em;
+    padding: 5px;
+}
+
+    .infobox > * {
+        float: left;
+    }
+
+    .infobox > :nth-child(2) {
+        display: grid;
+        padding-left: 5px;
+    }
+
+/* MultiInsertTop */
+.multiInsertTop, .musterTop {
+    overflow:hidden;
+}
+
+    .multiInsertTop input[type=number] {
+        width: 60px;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+/* Color every odd row and hover when onclick */
+.list > tbody > tr:nth-of-type(odd) > td:not([colspan]) {
+    background-color: #D0DBF5;
+}
+
+.list > tbody > tr > td:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 5px;
+}
+
+.list > tbody > tr > td:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-right: 5px;
+}
+
+.list td:only-child {
+    text-align: right;
+}
+
+.list > tbody > tr[onmouseup]:hover > td,
+.list > tbody > tr[onclick]:hover > td {
+    background-color: #B9C9ED;
+}
+
+.list input[readonly] {
+    background-color: white;
+}
+
+.pager span {
+    border-radius: 10px;
+    background-color: #D0DBF5;
+    display: inline-block;
+    padding: 3px 7px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.loginbox input[type=text], .loginbox input[type=password] {
+    width: 100%;
+}
+
+.loginbox td {
+    text-align: center;
+}
+
+.loggedinbox {
+    text-align: right;
+    margin: 20px;
+}
+
+    .loggedinbox input {
+        margin-top: 5px;
+        font-size: 0.9em;
+        height: 20px;
+    }
+
+        .loggedinbox input[type=submit] {
+            display: none;
+        }
+
+.centered {
+    margin: auto;
+}
+
+.error:not(input):not(select) {
+    color: red;
+    font-weight: bold;
+}
+
+input.error, select.error {
+    background-color:#FFCCCC;
+}
+
+input.success, select.success {
+    background-color: #99FF99;
+}
+
+input.warning, select.warning {
+    background-color:#fffaaa;
+}
+
+.block {
+    display: block;
+}
+
+div.error {
+    text-align: center;
+    padding: 50px;
+}
+
+.valsum {
+    font-size: 0.8em;
+}
+
+.modalBackground {
+    background-color: Gray;
+    filter: alpha(opacity=50);
+    opacity: 0.6;
+}
+
+.modalPopup {
+    background-color: #E5ECFB;
+    border: 1px solid #777;
+    border-radius: 8px;
+}
+
+.hovermenu {
+    background-color: #d0dbf5;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    padding: 5px;
+    -moz-box-shadow: #777 0 0 5px;
+    -webkit-box-shadow: #777 0 0 5px;
+    box-shadow: #777 0 0 5px;
+}
+
+    .hovermenu * {
+        display: block;
+        text-decoration: none;
+    }
+
+    .hovermenu > *:not(:first-child):before {
+        content: " - ";
+    }
+
+    .hovermenu > span:first-child {
+        letter-spacing: 4px;
+        font-size: 0.8em;
+        text-align: center;
+        border-bottom: 1px solid #999;
+        margin-bottom: 5px;
+    }
+
+.hoverdetails {
+    background-color: #d0dbf5;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding: 0 5px;
+    -moz-box-shadow: #777 0 0 1px;
+    -webkit-box-shadow: #777 0 0 1px;
+    box-shadow: #777 0 0 1px;
+    cursor: default;
+}
+
+.completionlist {
+    border: solid 1px Gray;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: #FFFFFF;
+}
+
+.completionlistItem, .completionlistHighlight {
+    padding: 3px;
+}
+
+.completionlistHighlight {
+    background-color: #D0DBF5;
+}
+
+/*.insertlink {
+    font-weight:bold;
+    display:inline-block;
+    background-color:#D0DBF5;
+    padding:5px;
+    border-radius:5px;
+}*/
+
+.detailstooltip, div.textwithoptions > div {
+    background-color: #D0DBF5;
+    border-radius: 8px;
+    padding: 5px;
+    color: #696969;
+    border: 1px solid #777;
+    cursor: default;
+    box-shadow: 0 0 10px #999;
+}
+
+.detailstooltip {
+    font-size: 0.8em;
+}
+
+div.textwithoptions > div {
+    font-size: 1.2em;
+}
+
+div.textwithoptions span {
+    display:inline-block;
+}
+
+div.textwithoptions span:not([id]) {
+    width:60px;
+}
+
+img.icon {
+    height: 20px;
+    width: 20px;
+}
+
+img.icon_small {
+    height: 1em;
+    width: 1em;
+}
+
+.bulkupdate > div {
+    float: left;
+    width: 40%;
+    padding: 10px;
+}
+
+.bulkupdate textarea {
+    height: 500px;
+}
+
+.bulkupdate span {
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+
+.bulkupdate {
+    overflow: hidden;
+}
+
+.ajax__calendar_footer {
+    display: none;
+}

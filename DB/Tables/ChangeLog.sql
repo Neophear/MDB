@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[ChangeLog]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [TimeStamp] DATETIME NOT NULL DEFAULT GETDATE(), 
+    [Text] NVARCHAR(1000) NOT NULL,
+    [VisibleToRead] BIT NOT NULL,
+    [VisibleToWrite] BIT NOT NULL
+)
