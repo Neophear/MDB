@@ -5,6 +5,7 @@ SELECT
 	tbl.Id,
 	tbl.[UniqueIdentifier],
 	O.Name AS TypeName,
+	tbl.[Status],
 	MANR,
 	Stabsnummer,
 	tbl.[Name],
@@ -15,6 +16,7 @@ FROM
 		Id,
 		MANR AS [UniqueIdentifier],
 		'' AS Info,
+		'' AS [Status],
 		MANR,
 		Stabsnummer,
 		[Name]
@@ -26,6 +28,7 @@ FROM
 		Id,
 		IMEI,
 		Model,
+		COV.[Status],
 		COV.MANR,
 		COV.Stabsnummer,
 		COV.[Name]
@@ -39,6 +42,7 @@ FROM
 		Id,
 		Simnumber,
 		Number,
+		COV.[Status],
 		COV.MANR,
 		COV.Stabsnummer,
 		COV.[Name]

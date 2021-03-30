@@ -31,17 +31,6 @@
                         <asp:Label ID="lblSimnumber" runat="server" Text='<%# Bind("Simnumber") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="PUK" SortExpression="PUK">
-                    <EditItemTemplate>
-                        <MDB:ReqTextBox runat="server" ID="rtxtPUK" MinLength="1" MaxLength="8" PropertyText="PUK" Text='<%# Bind("PUK") %>' />
-                    </EditItemTemplate>
-                    <InsertItemTemplate>
-                        <MDB:ReqTextBox runat="server" ID="rtxtPUK" MinLength="1" MaxLength="8" PropertyText="PUK" Text='<%# Bind("PUK") %>' />
-                    </InsertItemTemplate>
-                    <ItemTemplate>
-                        <asp:Label ID="lblPUK" runat="server" Text='<%# Bind("PUK") %>'></asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
                 <asp:TemplateField HeaderText="Nummer" SortExpression="Number" ConvertEmptyStringToNull="false">
                     <EditItemTemplate>
                         <asp:TextBox ID="txtNumber" runat="server" Text='<%# Bind("Number") %>' MaxLength="50"></asp:TextBox>
@@ -51,6 +40,17 @@
                     </InsertItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="lblNumber" runat="server" Text='<%# Bind("Number") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="PUK" SortExpression="PUK">
+                    <EditItemTemplate>
+                        <MDB:ReqTextBox runat="server" ID="rtxtPUK" MinLength="1" MaxLength="8" PropertyText="PUK" Text='<%# Bind("PUK") %>' />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        <MDB:ReqTextBox runat="server" ID="rtxtPUK" MinLength="1" MaxLength="8" PropertyText="PUK" Text='<%# Bind("PUK") %>' />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lblPUK" runat="server" Text='<%# Bind("PUK") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
     <%--            <asp:TemplateField HeaderText="Type" SortExpression="IsData">
@@ -235,8 +235,8 @@
             </DeleteParameters>
             <InsertParameters>
                 <asp:Parameter Name="Simnumber" Type="String" />
-                <asp:Parameter Name="PUK" Type="String" />
                 <asp:Parameter Name="Number" Type="String" ConvertEmptyStringToNull="false" />
+                <asp:Parameter Name="PUK" Type="String" />
                 <asp:Parameter Name="IsData" Type="Boolean" />
                 <asp:Parameter Name="FormatRefId" Type="Int32" />
                 <asp:Parameter Name="QuotaRefId" Type="Int32" />
@@ -253,8 +253,8 @@
             <UpdateParameters>
                 <asp:Parameter Name="Id" Type="Int32" />
                 <asp:Parameter Name="Simnumber" Type="String" />
-                <asp:Parameter Name="PUK" Type="String" />
                 <asp:Parameter Name="Number" Type="String" ConvertEmptyStringToNull="false" />
+                <asp:Parameter Name="PUK" Type="String" />
                 <asp:Parameter Name="IsData" Type="Boolean" />
                 <asp:Parameter Name="FormatRefId" Type="Int32" />
                 <asp:Parameter Name="QuotaRefId" Type="Int32" />

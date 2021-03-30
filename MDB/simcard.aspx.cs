@@ -41,6 +41,11 @@ namespace MDB
 
         protected void dvSimcard_DataBound(object sender, EventArgs e)
         {
+            if (dvSimcard.CurrentMode == DetailsViewMode.Insert)
+            {
+                ((DropDownList)dvSimcard.FindControl("ddlDataPlan")).SelectedIndex = 4;
+            }
+
             if (dvSimcard.CurrentMode == DetailsViewMode.Edit)
             {
                 //((RadioButtonList)dvSimcard.FindControl("rblIsData")).SelectedValue = DataBinder.Eval(dvSimcard.DataItem, "IsData").ToString();

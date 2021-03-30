@@ -29,8 +29,8 @@ namespace MDB
             }            
             
             //Green BG if localhost (to make it clear if debugging or not)
-            //if (Request.Url.Host == "localhost")
-            //    body.Style.Add("background-color", "lightgreen");
+            if (Request.Url.Host == "localhost")
+                body.Style.Add("background-color", "lightgreen");
 
             hdlnkCDD.Href = $"~/Content/StyleSheet.css?d={File.GetLastWriteTime(Server.MapPath("~/Content/StyleSheet.css")).ToString("yyyyMMddHHmm")}";
             scriptmngr.Scripts.Add(new ScriptReference($"~/Scripts/mdbscripts.js?v={File.GetLastWriteTime(Server.MapPath("~/Scripts/mdbscripts.js")):yyyyMMddHHmm}"));

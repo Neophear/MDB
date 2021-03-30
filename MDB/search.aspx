@@ -15,6 +15,7 @@
             <asp:BoundField DataField="TypeName" HeaderText="Type" SortExpression="TypeName" />
             <asp:BoundField DataField="UniqueIdentifier" HeaderText="MANR/IMEI/SIMnummer" SortExpression="UniqueIdentifier" />
             <asp:BoundField DataField="Info" HeaderText="Nummer/model" SortExpression="Info" />
+            <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
             <asp:TemplateField HeaderText="Bruger" SortExpression="Stabsnummer">
                 <ItemTemplate>
                     <asp:Label ID="lblUser" runat="server" Visible='<%# Eval("MANR") != DBNull.Value %>' Text='<%# ((int)Eval("TypeId") == 2 ? "" : "Udleveret til ") + $"{Eval("Stabsnummer")} {Eval("Name")}" %>'></asp:Label>
